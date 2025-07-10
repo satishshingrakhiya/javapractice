@@ -41,4 +41,22 @@ public class MathProblems {
 		}
 		return perfectNumbers;
 	}
+	
+	//Write method List<Integer> calcPrimeNumbers(int num) that calculates prime number up to num value
+	public List<Integer> calcPrimeNumbers(int num) {
+		List<Integer> primeNumbers = new LinkedList<>();
+		for (int i=2; i<=num; i++) {
+			boolean isPrime=true;
+			for (int j=2; j<=Math.sqrt(i); j++) {
+				if(i % j == 0) {
+					isPrime = false;
+				}
+			}
+			if (isPrime) {
+				primeNumbers.add(i);
+			}
+		}
+		return primeNumbers;
+	}
+
 }

@@ -25,5 +25,11 @@ public class App {
         for (int i: perfectNumbers) {
         	System.out.print(i + " ");
         }
+        
+        List<Integer> primeNumbers = mp.calcPrimeNumbers(100);
+        System.out.print("Prime Numbers: ");
+        for (int i: primeNumbers) {
+        	System.out.print(i + " ");
+        }
     }
 }
