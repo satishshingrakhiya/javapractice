@@ -80,12 +80,26 @@ public class MathProblems {
 			}
 		}
 		
-		List<Map<Integer, Integer>> primePairs = new LinkedList<>();
-		primePairs.add(twin);
-		primePairs.add(cousin);
-		primePairs.add(sexy);
+		List<Map<Integer, Integer>> primePairsList = new LinkedList<>();
+		primePairsList.add(twin);
+		primePairsList.add(cousin);
+		primePairsList.add(sexy);
 		
-		return primePairs;
+		return primePairsList;
+	}
+	
+	//Create method int calcChecksum(String) that performs the following position based calculation for the checksum of any number of length given as string
+	// z1z2z3...zn => (1*z1 + 2*z2 + 3*z3 + ... + n*zn) % 10
+	public int calcCheckSum(String num) {
+		int num1 = Integer.parseInt(num);
+		int checkSum = 0;
+		int length = num.length();
+		while (num1 > 0) {
+			checkSum += (num1 % 10) * length;
+			num1 = num1/10;
+			length--;
+		}
+		return checkSum % 10;
 	}
 
 }

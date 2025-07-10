@@ -38,6 +38,9 @@ public class App {
         for (Map map: primePairs) {
         	System.out.println(map);
         }
+        
+        System.out.println(mp.calcCheckSum("11111"));
+        System.out.println(mp.calcCheckSum("87654321"));
     }
         
 }
