@@ -1,5 +1,7 @@
 package com.javapractice.java;
 
+import java.util.List;
+
 import com.javapractice.java.MathProblems.MathProblems;
 
 /**
@@ -17,5 +19,11 @@ public class App {
         System.out.println(mp.basicArithmeticOperation2(3));
         System.out.println(mp.basicArithmeticOperation2(8));
         System.out.println(mp.basicArithmeticOperation2(15));
+        
+        List<Integer> perfectNumbers = mp.calcPerfectNumbers(10000);
+        System.out.print("Perfect Numbers: ");
+        for (int i: perfectNumbers) {
+        	System.out.print(i + " ");
+        }
     }
 }

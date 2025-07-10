@@ -1,5 +1,8 @@
 package com.javapractice.java.MathProblems;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class MathProblems {
 	
 	//implement multiplication of two numbers divide by two and the remainder of the result when divided by seven
@@ -21,5 +24,21 @@ public class MathProblems {
 		}
 		return "Count is: " + count + ". Sum is : " + sum + ".";
 	}
-
+	
+	//Write method List<Integer> calcPerfectNumbers(int num) that calculates perfect number up to num value
+	public List<Integer> calcPerfectNumbers(int num) {
+		List<Integer> perfectNumbers = new LinkedList<>();
+		for (int i=2; i<=num; i++) {
+			int sum = 0;
+			for (int j=1; j<=i/2; j++) {
+				if (i % j == 0) {
+					sum += j;
+				}
+			}
+			if (sum == i) {
+				perfectNumbers.add(sum);
+			}
+		}
+		return perfectNumbers;
+	}
 }
