@@ -1,6 +1,7 @@
 package com.javapractice.java;
 
 import java.util.List;
+import java.util.Map;
 
 import com.javapractice.java.MathProblems.MathProblems;
 
@@ -31,5 +32,12 @@ public class App {
         for (int i: primeNumbers) {
         	System.out.print(i + " ");
         }
+        System.out.println();
+        
+        List<Map<Integer,Integer>> primePairs = mp.primePairs(100);
+        for (Map map: primePairs) {
+        	System.out.println(map);
+        }
     }
+        
 }

@@ -1,7 +1,9 @@
 package com.javapractice.java.MathProblems;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 public class MathProblems {
 	
@@ -57,6 +59,33 @@ public class MathProblems {
 			}
 		}
 		return primeNumbers;
+	}
+	
+	//Compute all pairs of prime numbers with a distance  of 2 (twin), 4 (Cousin), and 6 (sexy) up to a given number n.
+	public List<Map<Integer, Integer>> primePairs(int num) {
+		List<Integer> primeNumbers = calcPrimeNumbers(num);
+		Map<Integer, Integer> twin = new HashMap<>();
+		Map<Integer, Integer> cousin = new HashMap<>();
+		Map<Integer, Integer> sexy = new HashMap<>();
+		
+		for (int i: primeNumbers) {
+			if (primeNumbers.contains(i+2)) {
+				twin.put(i,	i+2);
+			}
+			if (primeNumbers.contains(i+4)) {
+				cousin.put(i, i+4);
+			}
+			if (primeNumbers.contains(i+6)) {
+				sexy.put(i, i+6);
+			}
+		}
+		
+		List<Map<Integer, Integer>> primePairs = new LinkedList<>();
+		primePairs.add(twin);
+		primePairs.add(cousin);
+		primePairs.add(sexy);
+		
+		return primePairs;
 	}
 
 }
