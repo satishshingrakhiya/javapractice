@@ -146,4 +146,21 @@ public class MathProblems {
 		}
 		return triplets;
 	}
+	
+	//9. Write program to find all armstrong numbers i.e. 100x+10y+x = x^3+y^3+z^3
+	public List<Integer> caclArmstrongNumbers() {
+		List<Integer> arms = new LinkedList<>();
+		for (int i=100; i<1000; i++) {
+			int temp = i;
+			int sum = 0;
+			while (temp > 0) {
+				int mod = temp % 10;
+				sum += mod*mod*mod;
+				temp /= 10;
+			}
+			if (sum == i)
+				arms.add(i);
+		}
+		return arms;
+	}
 }

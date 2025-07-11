@@ -49,6 +49,11 @@ public class App {
         for(String str: pyTriplets) {
         	System.out.println(str);
         }
+        
+        List<Integer> arms = mp.caclArmstrongNumbers();
+        for (int i: arms) {
+        	System.out.println("Armstrong Number: " + i);
+        }
     }
         
 }
