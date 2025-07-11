@@ -7,13 +7,13 @@ import java.util.Map;
 
 public class MathProblems {
 	
-	//implement multiplication of two numbers divide by two and the remainder of the result when divided by seven
+	//1. implement multiplication of two numbers divide by two and the remainder of the result when divided by seven
 	public int basicArithmeticOperation1(int num1, int num2) {
 		int result = ((num1 * num2) / 2) % 7;
 		return result;
 	}
 	
-	//Find the number as well as the sum of natural numbers, which are divisible by 2 or 7 up to a given maximum value
+	//2. Find the number as well as the sum of natural numbers, which are divisible by 2 or 7 up to a given maximum value
 	public String basicArithmeticOperation2(int num) {
 		int sum = 0, count = 0;
 		if (num >= 2) {
@@ -27,7 +27,7 @@ public class MathProblems {
 		return "Count is: " + count + ". Sum is : " + sum + ".";
 	}
 	
-	//Write method List<Integer> calcPerfectNumbers(int num) that calculates perfect number up to num value
+	//3. Write method List<Integer> calcPerfectNumbers(int num) that calculates perfect number up to num value
 	public List<Integer> calcPerfectNumbers(int num) {
 		List<Integer> perfectNumbers = new LinkedList<>();
 		for (int i=2; i<=num; i++) {
@@ -44,7 +44,7 @@ public class MathProblems {
 		return perfectNumbers;
 	}
 	
-	//Write method List<Integer> calcPrimeNumbers(int num) that calculates prime number up to num value
+	//4. Write method List<Integer> calcPrimeNumbers(int num) that calculates prime number up to num value
 	public List<Integer> calcPrimeNumbers(int num) {
 		List<Integer> primeNumbers = new LinkedList<>();
 		for (int i=2; i<=num; i++) {
@@ -61,7 +61,7 @@ public class MathProblems {
 		return primeNumbers;
 	}
 	
-	//Compute all pairs of prime numbers with a distance  of 2 (twin), 4 (Cousin), and 6 (sexy) up to a given number n.
+	//5. Compute all pairs of prime numbers with a distance  of 2 (twin), 4 (Cousin), and 6 (sexy) up to a given number n.
 	public List<Map<Integer, Integer>> primePairs(int num) {
 		List<Integer> primeNumbers = calcPrimeNumbers(num);
 		Map<Integer, Integer> twin = new HashMap<>();
@@ -88,7 +88,7 @@ public class MathProblems {
 		return primePairsList;
 	}
 	
-	//Create method int calcChecksum(String) that performs the following position based calculation for the checksum of any number of length given as string
+	// 6. Create method int calcChecksum(String) that performs the following position based calculation for the checksum of any number of length given as string
 	// z1z2z3...zn => (1*z1 + 2*z2 + 3*z3 + ... + n*zn) % 10
 	public int calcCheckSum(String num) {
 		int num1 = Integer.parseInt(num);
@@ -100,6 +100,35 @@ public class MathProblems {
 			length--;
 		}
 		return checkSum % 10;
+	}
+	
+	//Write a program to convert roman number to numeric value
+	public int romanToNumber(String roman) {
+		int number = 0;
+		String romanCap = roman.toUpperCase();
+		for (int i=0; i<roman.length(); i++) {
+			if (romanCap.charAt(i) == 'I' && romanCap.lastIndexOf('X') < i && romanCap.lastIndexOf('V') < i)
+				number += 1;
+			else if (romanCap.charAt(i) == 'I' && (romanCap.lastIndexOf('X') > i || romanCap.lastIndexOf('V') > i))
+				number -= 1;
+			else if (romanCap.charAt(i) == 'X' && romanCap.lastIndexOf('L') < i && romanCap.lastIndexOf('C') < i)
+				number += 10;
+			else if (romanCap.charAt(i) == 'X' && (romanCap.lastIndexOf('L') > i || romanCap.lastIndexOf('C') > i))
+				number -= 10;
+			else if (romanCap.charAt(i) == 'C' && romanCap.lastIndexOf('D') < i && romanCap.lastIndexOf('M') < i)
+				number += 100;
+			else if (romanCap.charAt(i) == 'C' && (romanCap.lastIndexOf('D') > i || romanCap.lastIndexOf('M') > i))
+				number -= 100;
+			else if (romanCap.charAt(i) == 'V')
+				number += 5;
+			else if (romanCap.charAt(i) == 'L')
+				number += 50;
+			else if (romanCap.charAt(i) == 'D')
+				number += 500;
+			else if (romanCap.charAt(i) == 'M')
+				number += 1000;
+		}
+		return number;
 	}
 
 }

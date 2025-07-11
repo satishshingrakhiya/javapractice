@@ -41,6 +41,9 @@ public class App {
         
         System.out.println(mp.calcCheckSum("11111"));
         System.out.println(mp.calcCheckSum("87654321"));
+        
+        System.out.println(mp.romanToNumber("MCMLXXI"));
+        System.out.println(mp.romanToNumber("cdxliv"));
     }
         
 }
