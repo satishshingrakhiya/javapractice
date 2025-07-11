@@ -44,6 +44,11 @@ public class App {
         
         System.out.println(mp.romanToNumber("MCMLXXI"));
         System.out.println(mp.romanToNumber("cdxliv"));
+        
+        List<String> pyTriplets = mp.pythagorasTriplets(100);
+        for(String str: pyTriplets) {
+        	System.out.println(str);
+        }
     }
         
 }

@@ -102,7 +102,7 @@ public class MathProblems {
 		return checkSum % 10;
 	}
 	
-	//Write a program to convert roman number to numeric value
+	//7. Write a program to convert roman number to numeric value
 	public int romanToNumber(String roman) {
 		int number = 0;
 		String romanCap = roman.toUpperCase();
@@ -131,4 +131,19 @@ public class MathProblems {
 		return number;
 	}
 
+	//8. Write program to list all the pythagoras triplets till provided number
+	public List<String> pythagorasTriplets(int num) {
+		List<String> triplets = new LinkedList<>();
+		double cd;
+		int ci;
+		for (double i=1; i<=num; i++) {
+			for (double j=i; j<=num; j++) {
+				cd = Math.sqrt(i*i + j*j);
+				ci = (int) cd;
+				if (ci == cd)
+						triplets.add("Pythagoras Triplets: " + (int)i + " " + (int)j + " " + ci);
+			}
+		}
+		return triplets;
+	}
 }
