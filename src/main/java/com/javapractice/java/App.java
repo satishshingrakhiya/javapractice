@@ -54,6 +54,8 @@ public class App {
         for (int i: arms) {
         	System.out.println("Armstrong Number: " + i);
         }
+        
+        System.out.println(mp.basicArithmeticOperation10(2000));
     }
         
 }

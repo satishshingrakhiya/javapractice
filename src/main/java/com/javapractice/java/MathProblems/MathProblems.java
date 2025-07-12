@@ -163,4 +163,22 @@ public class MathProblems {
 		}
 		return arms;
 	}
+	
+	//10. Two Numbers are called friends if the sum of their divisors is equal to the other number. 
+	// Write program to find these number pairs
+	public Map<Integer, Integer> basicArithmeticOperation10(int num) {
+		Map<Integer, Integer> friends = new HashMap<>();
+		for (int i=1; i<=num; i++) {
+			int sum1 = 0;
+			for (int j=1; j<=i/2; j++) {
+				if (i % j == 0) {sum1 += j;}
+			}
+			int sum2 = 0;
+			for (int k=1; k<=sum1/2; k++) {
+				if (sum1 % k == 0) {sum2 += k;}
+			}
+			if (sum2 == i && sum1 != sum2) {friends.put(i,  sum1);}
+		}
+		return friends;
+	}
 }
