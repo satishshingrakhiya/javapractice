@@ -70,6 +70,11 @@ public class App {
         System.out.print("Fibonacci Series: ");
         for (int i: fibSeries)
         	System.out.print(i + " ");
+        
+        List<Integer> fibIterativeSeries = rp.fibSeriesIterative(2);
+        System.out.print("Fibonacci Series with Iterative Method: ");
+        for (int i: fibIterativeSeries)
+        	System.out.print(i + " ");
     }
         
 }

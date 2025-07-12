@@ -5,7 +5,7 @@ import java.util.List;
 
 public class RecursionProblems {
 	
-	//1. Implement Fibonacci series till number n
+	//12. Implement Fibonacci series till number n
 	public List<Integer> fibonacciSeries(int n) {
 		List<Integer> result = new LinkedList<>();
 		for (int i=1; i<=n; i++) {
@@ -18,5 +18,15 @@ public class RecursionProblems {
 		if (n==1 || n==2)
 			return 1;
 		return fibonacciNumber(n-1) + fibonacciNumber(n-2);
+	}
+	
+	//13. Implement Fibonacci Series with iterative method
+	public List<Integer> fibSeriesIterative(int n){
+		List<Integer> result = new LinkedList<>();
+		result.add(1);
+		result.add(1);
+		for (int i=2; i<n; i++) 
+			result.add(result.get(i-2) + result.get(i-1));
+		return result;
 	}
 }
