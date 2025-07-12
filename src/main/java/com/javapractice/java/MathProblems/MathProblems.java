@@ -181,4 +181,20 @@ public class MathProblems {
 		}
 		return friends;
 	}
+	
+	//11. Calculate all prime factor of a given number
+	public List<Integer> caclPrimeFactors(int num) {
+		List<Integer> primes = new LinkedList<>();
+		int divisor = 2;
+		while(num >= divisor) {
+			if (num % divisor == 0) {
+				primes.add(divisor);
+				num = num/divisor;
+			}
+			else {
+				divisor++;
+			}
+		}
+		return primes;
+	}
 }

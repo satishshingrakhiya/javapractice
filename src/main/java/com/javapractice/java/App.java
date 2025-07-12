@@ -56,6 +56,10 @@ public class App {
         }
         
         System.out.println(mp.basicArithmeticOperation10(2000));
+        
+        List<Integer> primes = mp.caclPrimeFactors(73548);
+        for (int i: primes)
+        	System.out.print(i + " ");
     }
         
 }
