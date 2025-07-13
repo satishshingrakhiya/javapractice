@@ -59,4 +59,22 @@ public class RecursionProblems {
 		return gcd(b, a % b);
 	}
 	
+	//17. Write GCD iterative
+	public int gcdIterative(int a, int b) {
+		if (b > a) {
+			a = a + b;
+			b = a - b;
+			a = a - b;
+		}
+		
+		if (b == 0)
+			return a;
+		
+		for (int i=b; i>0; i--) {
+			if (a % i == 0 && b % i == 0)
+				return i;
+		}
+		return 1;
+	}
+	
 }

@@ -80,6 +80,7 @@ public class App {
         System.out.println("Count of digits: " + rp.countDigits(864856438));
         System.out.println("Sum of digits: " + rp.sumOfDigits(4526756));
         System.out.println("GCD of 84 & 56: " + rp.gcd(84, 56));
+        System.out.println("GCD by iterative method of 100 & 60: " + rp.gcdIterative(100, 60));
     }
         
 }
