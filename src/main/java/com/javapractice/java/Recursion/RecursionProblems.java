@@ -82,6 +82,11 @@ public class RecursionProblems {
 		return a * b /gcd(a, b);
 	}
 	
-	
-	
+	//19. Write recursive method String reverseString(String str)
+	public String reverseString(String str) {
+		if (str.length() <= 1)
+			return str;
+		String reverse = str.substring(str.length()-1);
+		return reverse + reverseString(str.substring(0, str.length()-1));
+	}
 }

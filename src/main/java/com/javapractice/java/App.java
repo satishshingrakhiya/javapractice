@@ -82,6 +82,7 @@ public class App {
         System.out.println("GCD of 84 & 56: " + rp.gcd(84, 56));
         System.out.println("GCD by iterative method of 100 & 60: " + rp.gcdIterative(100, 60));
         System.out.println("LCM of 8 & 6 is: " + rp.lcm(8, 6));
+        System.out.println("Revers String of 'qwertyuiop' is: " + rp.reverseString("qwertyuiop"));
     }
         
 }
