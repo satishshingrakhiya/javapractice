@@ -37,4 +37,12 @@ public class RecursionProblems {
 		int remainder = num/10;
 		return countDigits(remainder) + 1;
 	}
+	
+	//15. Write recursive method to find sum of digits of a number
+	public int sumOfDigits(int num) {
+		if (num < 10)
+			return num;
+		int sum = num % 10;
+		return sumOfDigits(num/10) + sum;
+	}
 }

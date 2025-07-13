@@ -78,6 +78,7 @@ public class App {
         
         System.out.println();
         System.out.println(rp.countDigits(864856438));
+        System.out.println(rp.sumOfDigits(4526756));
     }
         
 }
