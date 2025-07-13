@@ -1,5 +1,6 @@
 package com.javapractice.java.Recursion;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -88,5 +89,13 @@ public class RecursionProblems {
 			return str;
 		String reverse = str.substring(str.length()-1);
 		return reverse + reverseString(str.substring(0, str.length()-1));
+	}
+	
+	//20. Write method sum(int arr[]) that recursively computes the sum of the values of the given array
+	public int sum(int arr[]) {
+		if (arr.length == 1)
+			return arr[0];
+		int total = arr[0];
+		return total + sum(Arrays.copyOfRange(arr, 1, arr.length));
 	}
 }
