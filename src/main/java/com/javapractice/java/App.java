@@ -71,10 +71,13 @@ public class App {
         for (int i: fibSeries)
         	System.out.print(i + " ");
         
-        List<Integer> fibIterativeSeries = rp.fibSeriesIterative(2);
+        List<Integer> fibIterativeSeries = rp.fibSeriesIterative(8);
         System.out.print("Fibonacci Series with Iterative Method: ");
         for (int i: fibIterativeSeries)
         	System.out.print(i + " ");
+        
+        System.out.println();
+        System.out.println(rp.countDigits(864856438));
     }
         
 }

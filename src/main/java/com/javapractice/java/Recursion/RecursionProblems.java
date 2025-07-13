@@ -26,7 +26,15 @@ public class RecursionProblems {
 		result.add(1);
 		result.add(1);
 		for (int i=2; i<n; i++) 
-			result.add(result.get(i-2) + result.get(i-1));
+		result.add(result.get(i-2) + result.get(i-1));
 		return result;
+	}
+	
+	//14. Write recursive method to find number of digits in a positive natural number
+	public int countDigits(int num) {
+		if (num < 10)
+			return 1;
+		int remainder = num/10;
+		return countDigits(remainder) + 1;
 	}
 }
