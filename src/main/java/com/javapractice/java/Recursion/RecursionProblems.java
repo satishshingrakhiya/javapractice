@@ -98,4 +98,21 @@ public class RecursionProblems {
 		int total = arr[0];
 		return total + sum(Arrays.copyOfRange(arr, 1, arr.length));
 	}
+	
+	//21. Write methos int min(int arr[]) using recursion
+	private int min(int arr[], int pos, int currentMin) {
+		
+		if(pos >= arr.length)
+			return currentMin;
+		
+		int current = arr[pos];
+		if (current < currentMin)
+			currentMin = current;
+		
+		return min(arr, pos + 1, currentMin);		
+	}
+	
+	public int min(int arr[]) {
+		return min(arr, 0, Integer.MAX_VALUE);
+	}
 }

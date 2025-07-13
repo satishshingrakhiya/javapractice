@@ -84,8 +84,9 @@ public class App {
         System.out.println("LCM of 8 & 6 is: " + rp.lcm(8, 6));
         System.out.println("Revers String of 'qwertyuiop' is: " + rp.reverseString("qwertyuiop"));
         
-        int arr[] = {1, 3, 5, 8, 6};
-        System.out.println("Sum of array [1, 3, 5, 8, 6]: " + rp.sum(arr));
+        int arr[] = {8, 3, 5, 1, 6};
+        System.out.println("Sum of array [8, 3, 5, 1, 6]: " + rp.sum(arr));
+        System.out.println("Min from array: " + rp.min(arr));
     }
         
 }
