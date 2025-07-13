@@ -69,7 +69,7 @@ public class App {
         List<Integer> fibSeries = rp.fibonacciSeries(8);
         System.out.print("Fibonacci Series: ");
         for (int i: fibSeries)
-        	System.out.print(i + " ");
+        	System.out.print(i + " "); 
         
         List<Integer> fibIterativeSeries = rp.fibSeriesIterative(8);
         System.out.print("Fibonacci Series with Iterative Method: ");
@@ -77,8 +77,9 @@ public class App {
         	System.out.print(i + " ");
         
         System.out.println();
-        System.out.println(rp.countDigits(864856438));
-        System.out.println(rp.sumOfDigits(4526756));
+        System.out.println("Count of digits: " + rp.countDigits(864856438));
+        System.out.println("Sum of digits: " + rp.sumOfDigits(4526756));
+        System.out.println("GCD of 84 & 56: " + rp.gcd(84, 56));
     }
         
 }

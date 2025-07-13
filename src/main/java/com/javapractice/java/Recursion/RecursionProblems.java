@@ -45,4 +45,18 @@ public class RecursionProblems {
 		int sum = num % 10;
 		return sumOfDigits(num/10) + sum;
 	}
+	
+	//16. Write GCD recursive gcd(int a, int b) 
+	public int gcd(int a, int b) {
+		if (b > a) {
+			a = a + b;
+			b = a - b;
+			a = a - b;
+		}
+		
+		if (b == 0)
+			return a;
+		return gcd(b, a % b);
+	}
+	
 }
