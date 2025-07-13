@@ -77,4 +77,11 @@ public class RecursionProblems {
 		return 1;
 	}
 	
+	//18. Write LCD  method
+	public int lcm(int a, int b) {
+		return a * b /gcd(a, b);
+	}
+	
+	
+	
 }
