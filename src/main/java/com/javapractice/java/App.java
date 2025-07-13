@@ -87,6 +87,8 @@ public class App {
         int arr[] = {8, 3, 5, 1, 6};
         System.out.println("Sum of array [8, 3, 5, 1, 6]: " + rp.sum(arr));
         System.out.println("Min from array: " + rp.min(arr));
+        
+        System.out.println("Binary of 250 is: " + rp.toBinary(250));
     }
         
 }

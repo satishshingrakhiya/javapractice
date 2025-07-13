@@ -99,7 +99,7 @@ public class RecursionProblems {
 		return total + sum(Arrays.copyOfRange(arr, 1, arr.length));
 	}
 	
-	//21. Write methos int min(int arr[]) using recursion
+	//21. Write method int min(int arr[]) using recursion
 	private int min(int arr[], int pos, int currentMin) {
 		
 		if(pos >= arr.length)
@@ -114,5 +114,16 @@ public class RecursionProblems {
 	
 	public int min(int arr[]) {
 		return min(arr, 0, Integer.MAX_VALUE);
+	}
+	
+	//22. Write method String toBinary(int num)
+	public String toBinary(int num) {
+		if (num == 1)
+			return "1";
+		if (num == 0)
+			return "0";
+		int remainder = num % 2;
+		String binary = String.valueOf(remainder);
+		return toBinary(num/2) + binary;
 	}
 }
