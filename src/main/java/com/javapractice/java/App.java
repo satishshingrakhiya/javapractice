@@ -89,6 +89,8 @@ public class App {
         System.out.println("Min from array: " + rp.min(arr));
         
         System.out.println("Binary of 250 is: " + rp.toBinary(250));
+        System.out.println("Ocatal of 250 is: " + rp.toOctal(250));
+        System.out.println("Hexadecimal of 250 is: " + rp.toHex(250));
     }
         
 }

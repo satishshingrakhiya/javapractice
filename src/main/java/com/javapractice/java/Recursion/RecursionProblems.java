@@ -126,4 +126,33 @@ public class RecursionProblems {
 		String binary = String.valueOf(remainder);
 		return toBinary(num/2) + binary;
 	}
+	
+	//23. Write method String toOctal(int num) and toHex(int num)
+	public String toOctal(int num) {
+		if (num < 8)
+			return String.valueOf(num);
+		
+		int remainder = num % 8;
+		String octal = String.valueOf(remainder);
+		
+		return toOctal(num/8) + octal;
+	}
+	
+	private String asHexDigit(int n) {
+		if (n < 10)
+			return String.valueOf(n);
+		if (n <= 15)
+			return Character.toString(n - 10 + 'A');
+		throw new IllegalArgumentException("value not in range 0-15, but is: " + n);
+	}
+	
+	public String toHex(int num) {
+		if (num <= 15)
+			return asHexDigit(num);
+		
+		int remainder = num % 16;
+		String hex = asHexDigit(remainder);
+		
+		return toHex(num/16) + hex;
+	}
 }
