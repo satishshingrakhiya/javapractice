@@ -155,4 +155,16 @@ public class RecursionProblems {
 		
 		return toHex(num/16) + hex;
 	}
+	// 24. Write recursive method boolean isPowerOf2(int num) that evaluates the given positive integer to see if it is power of two
+	public boolean isPowerof2(int num) {
+		if(num < 2)
+			return num==1;
+		
+		if (num % 2 != 0)
+			return false;
+		
+		return isPowerof2(num/2);
+	}
 }
+
+

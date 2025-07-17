@@ -91,6 +91,8 @@ public class App {
         System.out.println("Binary of 250 is: " + rp.toBinary(250));
         System.out.println("Ocatal of 250 is: " + rp.toOctal(250));
         System.out.println("Hexadecimal of 250 is: " + rp.toHex(250));
-    }
         
+        System.out.println("1024 is powwer of 2: " + rp.isPowerof2(1024));
+        System.out.println("1000 is powwer of 2: " + rp.isPowerof2(1000));
+    }    
 }
