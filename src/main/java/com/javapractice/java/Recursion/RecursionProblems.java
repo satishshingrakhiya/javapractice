@@ -155,7 +155,7 @@ public class RecursionProblems {
 		
 		return toHex(num/16) + hex;
 	}
-	// 24. Write recursive method boolean isPowerOf2(int num) that evaluates the given positive integer to see if it is power of two
+	//24. Write recursive method boolean isPowerOf2(int num) that evaluates the given positive integer to see if it is power of two
 	public boolean isPowerof2(int num) {
 		if(num < 2)
 			return num==1;
@@ -164,6 +164,67 @@ public class RecursionProblems {
 			return false;
 		
 		return isPowerof2(num/2);
+	}
+	
+	//25. Write recursive method long powerOf(int base, int exp)
+	public long powerOf(int base, int exp) {
+		if (exp == 0)
+			return 1;
+		if (exp == 1)
+			return base;
+		return base * powerOf(base, exp-1);
+	}
+	
+	//26. Implement pascal's triangle
+//	private int calPascal(int row, int col) {		
+//		if (col == 1  ||  col == row)
+//			return 1;
+//		else
+//			return calPascal(row - 1, col - 1) + calPascal(row - 1, col);
+//	}
+//	
+//	public void printPascal(int num) {
+//		for (int row=1; row<=num; row++) {
+//			for (int col=1; col<=num; col++)
+//				System.out.print(calPascal(row, col));
+//			
+//			System.out.println();
+//		}
+//	}
+	
+	//27. Check for a number if it is palindrome without using string
+	public boolean isNumberPalindrome(int num) {
+		if (num < 10)
+			return true;
+		
+		int factor = calcPowOfTen(num);
+		int divisor = (int) Math.pow(10, factor);
+		
+		if (num < divisor * 10) {
+			int leftNumber = num/divisor;
+			int rightNumber = num % 10;
+			
+			int remainingNumber = (num / 10) % (divisor / 100);
+			System.out.println("Number: " + num + " Remaining Number: " +remainingNumber + " Divisor: " + divisor);
+			if (leftNumber != rightNumber)
+				return false;
+			else
+				return isNumberPalindrome(remainingNumber);
+		}
+		return false;
+	}
+	
+	private int calcPowOfTen(int num) {
+		return countDigits2(num) - 1;		
+	}
+	
+	private int countDigits2(int num) {
+		int count = 1;
+		while (num > 0) {
+			num = num/10;
+			count++;
+		}
+		return count;
 	}
 }
 

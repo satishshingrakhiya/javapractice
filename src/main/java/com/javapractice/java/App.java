@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.javapractice.java.MathProblems.MathProblems;
 import com.javapractice.java.Recursion.RecursionProblems;
+import com.javapractice.java.StringProbelms.StringProblems;
 
 /**
  * Hello world!
@@ -94,5 +95,16 @@ public class App {
         
         System.out.println("1024 is powwer of 2: " + rp.isPowerof2(1024));
         System.out.println("1000 is powwer of 2: " + rp.isPowerof2(1000));
+        
+        System.out.println("2 to the power of 10: " + rp.powerOf(2, 10));
+        System.out.println("4 to the power of 4: " + rp.powerOf(4, 4));
+        
+//        rp.printPascal(6);
+        System.out.println("10201 is Palindrome? " + rp.isNumberPalindrome(13231));
+        System.out.println("1062201 is Palindrome? " + rp.isNumberPalindrome(1062201));
+        
+        StringProblems sp = new StringProblems();
+        System.out.println(sp.isBinaryNumber("110111"));
+        System.out.println(sp.binaryToDecimal("110111"));
     }    
 }
