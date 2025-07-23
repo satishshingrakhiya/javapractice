@@ -1,5 +1,6 @@
 package com.javapractice.java;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -106,5 +107,11 @@ public class App {
         StringProblems sp = new StringProblems();
         System.out.println(sp.isBinaryNumber("110111"));
         System.out.println(sp.binaryToDecimal("110111"));
+        
+        System.out.println(sp.isHexNumber("AFDB12"));
+        System.out.println(sp.hexToDecimal("AFDB12"));
+        
+        List<String> strs = Arrays.asList("Hello", "World", "Example", "33", "!!!!");
+        System.out.println(sp.joinStrings(strs, " +++ "));
     }    
 }
