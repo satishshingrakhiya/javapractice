@@ -92,4 +92,19 @@ public class StringProblems {
 		}
 		return String.valueOf(chars);
 	}
+	
+	// 34. Write method to check if String is palindrome
+	public boolean isPalindrome(String str) {
+		char[] chars = str.toCharArray();
+		int left = 0;
+		int right = str.length() - 1;
+		
+		while (left < right) {
+			if (chars[left] != chars[right])
+				return false;
+			left++;
+			right--;
+		}
+		return true;
+	}
 }

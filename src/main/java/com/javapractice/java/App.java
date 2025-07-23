@@ -116,5 +116,8 @@ public class App {
         
         System.out.println(sp.reverseString("Reverse This"));
         System.out.println(sp.reverseString2("Reverse This"));
+        
+        System.out.println(sp.isPalindrome("ISISISISI"));
+        System.out.println(sp.isPalindrome("ISISISISIS"));
     }    
 }
