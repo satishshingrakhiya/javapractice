@@ -1,6 +1,10 @@
 package com.javapractice.java.StringProbelms;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class StringProblems {
 	
@@ -104,6 +108,19 @@ public class StringProblems {
 				return false;
 			left++;
 			right--;
+		}
+		return true;
+	}
+	
+	//35. Implement checkNoDuplicates method
+	public boolean checkNoDuplicates(String str) {
+		char[] chars = str.toLowerCase().toCharArray();
+		
+		Set<Character> containedChars = new HashSet<>();
+		for (char c: chars) {
+			if (containedChars.contains(c))
+				return false;
+			containedChars.add(c);
 		}
 		return true;
 	}

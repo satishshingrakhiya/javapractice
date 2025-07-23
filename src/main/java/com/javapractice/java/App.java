@@ -100,7 +100,7 @@ public class App {
         System.out.println("2 to the power of 10: " + rp.powerOf(2, 10));
         System.out.println("4 to the power of 4: " + rp.powerOf(4, 4));
         
-//        rp.printPascal(6);
+        // rp.printPascal(6);
         System.out.println("10201 is Palindrome? " + rp.isNumberPalindrome(13231));
         System.out.println("1062201 is Palindrome? " + rp.isNumberPalindrome(1062201));
         
@@ -119,5 +119,8 @@ public class App {
         
         System.out.println(sp.isPalindrome("ISISISISI"));
         System.out.println(sp.isPalindrome("ISISISISIS"));
+        
+        System.out.println(sp.checkNoDuplicates("hnksdfbignkibfir"));
+        System.out.println(sp.checkNoDuplicates("qwertyuiopasdfghjklzxcvbnm"));
     }    
 }
