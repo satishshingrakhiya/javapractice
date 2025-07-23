@@ -113,5 +113,8 @@ public class App {
         
         List<String> strs = Arrays.asList("Hello", "World", "Example", "33", "!!!!");
         System.out.println(sp.joinStrings(strs, " +++ "));
+        
+        System.out.println(sp.reverseString("Reverse This"));
+        System.out.println(sp.reverseString2("Reverse This"));
     }    
 }

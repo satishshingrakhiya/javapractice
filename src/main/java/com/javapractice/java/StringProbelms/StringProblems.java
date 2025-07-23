@@ -65,4 +65,31 @@ public class StringProblems {
 		}
 		return sb.toString();
 	}
+	
+	//33. Write reverseString method
+	public String reverseString(String str) {
+		String result = "";
+		for (char c: str.toCharArray()) {
+			result = c + result;
+		}
+		return result;
+	}
+	
+	public String reverseString2(String str) {
+		char[] chars = str.toCharArray();
+		int left = 0;
+		int right = str.length() - 1;
+		
+		while (left < right) {
+			char leftChar = chars[left];
+			char rightChar = chars[right];
+			
+			chars[left] = rightChar;
+			chars[right] = leftChar;
+			
+			left++;
+			right--;
+		}
+		return String.valueOf(chars);
+	}
 }
