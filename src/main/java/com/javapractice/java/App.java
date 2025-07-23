@@ -122,5 +122,7 @@ public class App {
         
         System.out.println(sp.checkNoDuplicates("hnksdfbignkibfir"));
         System.out.println(sp.checkNoDuplicates("qwertyuiopasdfghjklzxcvbnm"));
+        
+        System.out.println(sp.removeDuplicates("Satish"));
     }    
 }

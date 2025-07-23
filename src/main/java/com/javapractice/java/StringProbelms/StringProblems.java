@@ -124,4 +124,18 @@ public class StringProblems {
 		}
 		return true;
 	}
+	
+	//36. Implement removeDuplicates
+	public String removeDuplicates(String str) {
+		
+		List<Character> chars = new ArrayList<>();
+		StringBuilder sb = new StringBuilder();
+		for (char c: str.toLowerCase().toCharArray()) {
+			if (chars.contains(c))
+				continue;
+			chars.add(c);
+			sb.append(c);
+		}
+		return sb.toString();
+	}
 }
