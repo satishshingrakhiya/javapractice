@@ -138,4 +138,16 @@ public class StringProblems {
 		}
 		return sb.toString();
 	}
+	
+	//37. Implement capitalize(String) method
+	public String capitalize(String str) {
+		char[] chars = str.toCharArray();
+		for (int i=0; i < chars.length - 1; i++) {
+			if (i == 0)
+				chars[i] = Character.toUpperCase(chars[i]);
+			else if (chars[i] == ' ')
+				chars[i+1] = Character.toUpperCase(chars[i+1]);
+		}
+		return String.valueOf(chars);
+	}
 }

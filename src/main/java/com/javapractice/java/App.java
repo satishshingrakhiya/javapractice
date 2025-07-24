@@ -124,5 +124,7 @@ public class App {
         System.out.println(sp.checkNoDuplicates("qwertyuiopasdfghjklzxcvbnm"));
         
         System.out.println(sp.removeDuplicates("Satish"));
+        
+        System.out.println(sp.capitalize("this is an example string which needs to be capitalized."));
     }    
 }
