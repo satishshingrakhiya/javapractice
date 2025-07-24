@@ -126,5 +126,8 @@ public class App {
         System.out.println(sp.removeDuplicates("Satish"));
         
         System.out.println(sp.capitalize("this is an example string which needs to be capitalized."));
+        
+        System.out.println(sp.isSubstringRotation("Challenge", "GECHT"));
+        System.out.println(sp.isSubstringRotation("Challenge", "GECHall"));
     }    
 }

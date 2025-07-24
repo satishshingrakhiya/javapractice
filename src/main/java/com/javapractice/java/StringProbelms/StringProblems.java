@@ -150,4 +150,17 @@ public class StringProblems {
 		}
 		return String.valueOf(chars);
 	}
+	
+	//38. Check if string2 is substring of string1, given that it should be true in case it string2 is not substring of string1 but after rotating string1 it becomes substring;
+	public boolean isSubstringRotation(String str1, String str2) {
+		str1 = str1.toLowerCase();
+		str2 = str2.toLowerCase();
+		for (int i=0; i<str1.length(); i++) {
+			StringBuilder rotated = new StringBuilder();
+			rotated.append(str1.substring(i, str1.length()) + str1.substring(0, i));
+			if(rotated.toString().contains(str2))
+				return true;
+		}
+		return false;
+	}
 }
