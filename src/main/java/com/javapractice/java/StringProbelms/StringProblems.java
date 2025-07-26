@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 
 public class StringProblems {
 	
@@ -162,5 +164,40 @@ public class StringProblems {
 				return true;
 		}
 		return false;
+	}
+	
+	//39. Write checkBraces method which checks the sequence of round brackets
+	public boolean checkBraces(String input) {
+		int openingCount = 0;
+		for (int i=0; i < input.length(); i++) {
+			char ch = input.charAt(i);
+			
+			if (ch == '(')
+				openingCount++;
+			else if (ch == ')' ) {
+				openingCount--;
+				if (openingCount < 0)
+					return false;
+			}
+		}
+		return openingCount == 0;
+	}
+	
+	//40. Implement isAnagram(String, String) method
+	public boolean isAnagram(String str1, String str2) {
+		Map<Character, Integer> charCount1 = calcCharFreq(str1);
+		Map<Character, Integer> charCount2 = calcCharFreq(str2);
+		
+		return charCount1.equals(charCount2);
+	}
+	
+	public Map<Character, Integer> calcCharFreq(String input) {
+		Map<Character, Integer> charCounts = new TreeMap<>();
+		
+		for (char ch: input.toUpperCase().toCharArray()) {
+			charCounts.putIfAbsent(ch, 0);
+			charCounts.computeIfPresent(ch, (key, value) -> value + 1);
+		}
+		return charCounts;
 	}
 }

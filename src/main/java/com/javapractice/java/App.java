@@ -129,5 +129,7 @@ public class App {
         
         System.out.println(sp.isSubstringRotation("Challenge", "GECHT"));
         System.out.println(sp.isSubstringRotation("Challenge", "GECHall"));
+        
+        System.out.println(sp.isAnagram("NITSurat", "SuratNit"));
     }    
 }
